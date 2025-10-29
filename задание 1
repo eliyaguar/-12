@@ -1,0 +1,36 @@
+    internal class calculator
+    {
+        public static double Sum(double a, double b)
+        { return a + b;}
+        public static double Minus(double a, double b)
+        {return a - b;}
+        public static double Umnojenie(double a, double b)
+        {  return a * b; }
+        public static double Delenie(double a, double b) 
+        { if (b == 0)
+            { Console.WriteLine("ошибка");
+                return double.NaN; } 
+        else { return a / b; }
+        }
+
+
+    }
+
+
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        calculator deistvie = new calculator();
+        double sum = calculator.Sum(2, 4);
+        double minus = calculator.Minus(4, 4);
+        double umnojenie = calculator.Umnojenie(5, 8);
+        double delenie = calculator.Delenie(6, 8);
+        
+        Console.WriteLine($"сумма :{sum}");
+        Console.WriteLine($"вычитание :{minus}");
+        Console.WriteLine($"умножение :{umnojenie}");
+        Console.WriteLine($"деление :{delenie}");
+    }
+}
