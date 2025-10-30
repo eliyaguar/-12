@@ -1,0 +1,31 @@
+  internal class ObjectCounter
+  {
+      private static int _objectCounter = 0;
+      public static int Svoistvo
+      {
+          get { return _objectCounter; }
+      }
+      public static void Metod()
+      {
+          Console.WriteLine($"количество объектов {Svoistvo} ");
+          
+      }
+      public ObjectCounter ()
+      {
+          _objectCounter++;
+      }
+  }
+
+
+
+
+
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ObjectCounter objectCounter = new ObjectCounter();
+            ObjectCounter objectCounter2 = new ObjectCounter();
+            ObjectCounter.Metod();
+        }
+    }
